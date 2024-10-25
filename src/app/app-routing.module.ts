@@ -25,7 +25,8 @@ const routes: Routes = [
   {
     path : 'posts/:postId/edit',
     component:PostformComponent
-  }
+  },
+  { path: 'home', loadChildren: () => import('./shared/components/home/home.module').then(m => m.HomeModule) }
 ];
 
 @NgModule({
